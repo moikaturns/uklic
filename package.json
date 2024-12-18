@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "moikaturns",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@angular/cli": "^19.0.5"
+  }
 }
