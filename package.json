@@ -1,0 +1,11 @@
+{
+  "name": "uklic",
+  "version": "0.0.1",
+  "description": "generate uk license numbers for testing purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "moikaturns",
+  "license": "MIT"
+}
