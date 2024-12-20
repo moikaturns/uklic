@@ -11,7 +11,7 @@ on:
 
 jobs:
   angular:
-    name: Angular Build
+    name: CI Angular Build
     runs-on: ubuntu-latest
     strategy:
       matrix:
