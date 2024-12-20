@@ -5,9 +5,9 @@ name: Angular Build CI
 
 on:
   push:
-    branches: [ "pipeline" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "pipeline" ]
+    branches: [ "main" ]
 
 jobs:
   angular:
