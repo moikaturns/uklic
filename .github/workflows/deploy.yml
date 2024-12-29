@@ -14,7 +14,7 @@ on:
 jobs:
   angular:
     name: CI Deployment to GitHub Pages
-    runs-on: [self-hosted, linux, ARM64]
+    runs-on: [self-hosted, linux, X64]
 
     steps:
     - name: Test
