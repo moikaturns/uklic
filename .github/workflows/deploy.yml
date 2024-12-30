@@ -10,17 +10,16 @@ on:
 #    branches: [ "main" ]
 #  push:
 #    branches: [ "deploy-ghp" ]
-  push:
-    workflow_dispatch:
-      logLevel:
-        description: 'Log Level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-        - info
-        - warning
-        - debug
+  workflow_dispatch:
+    logLevel:
+      description: 'Log Level'
+      required: true
+      default: 'warning'
+      type: choice
+      options:
+      - info
+      - warning
+      - debug
 
 jobs:
   angular:
