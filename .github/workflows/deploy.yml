@@ -1,0 +1,32 @@
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Deployment to GitHub Pages
+
+on:
+#  push:
+#    branches: [ "main" ]
+#  pull_request:
+#    branches: [ "main" ]
+#  push:
+#    branches: [ "deploy-ghp" ]
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+        - info
+        - warning
+        - debug
+
+jobs:
+  angular:
+    name: CI Deployment to GitHub Pages
+    runs-on: [self-hosted]
+
+    steps:
+    - name: Test
+      run: echo "hello world"
