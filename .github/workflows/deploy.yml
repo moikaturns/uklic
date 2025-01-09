@@ -8,25 +8,29 @@ on:
 #    branches: [ "main" ]
 #  pull_request:
 #    branches: [ "main" ]
-#  push:
-#    branches: [ "deploy-ghp" ]
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log Level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-        - info
-        - warning
-        - debug
+  push:
+    branches: [ "deploy-ghp" ]
+#  workflow_dispatch:
+#    inputs:
+#      logLevel:
+#        description: 'Log Level'
+#        required: true
+#        default: 'warning'
+#        type: choice
+#        options:
+#        - info
+#        - warning
+#        - debug
 
 jobs:
   angular:
     name: CI Deployment to GitHub Pages
     runs-on: [self-hosted]
-
     steps:
-    - name: Test
-      run: echo "hello world"
+      - name: Msg 1
+        run: echo "calling"
+      - name: Call another workflow
+        uses: ./.github/workflows/build.yml
+      - name: Msg 2
+        run: echo "called"
+        
