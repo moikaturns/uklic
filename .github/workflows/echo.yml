@@ -1,0 +1,17 @@
+# .github/workflows/echo.yml
+name: Called echo workflow
+
+on:
+  workflow_call:
+    inputs:
+      message:
+        description: 'message to echo'
+        required: false
+        default: '.'
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "${{ inputs.message }}"

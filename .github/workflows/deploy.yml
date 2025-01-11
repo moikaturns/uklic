@@ -22,15 +22,23 @@ on:
 #        - warning
 #        - debug
 
-jobs:
-  angular:
-    name: CI Deployment to GitHub Pages
-    runs-on: [self-hosted]
-    steps:
-      - name: Msg 1
-        run: echo "calling"
-      - name: Call another workflow
-        uses: ./.github/workflows/build.yml
-      - name: Msg 2
-        run: echo "called"
+#jobs:
+#  angular:
+#    name: CI Deployment to GitHub Pages
+#    runs-on: [self-hosted]
+#    steps:
+#      - name: Msg 1
+#        run: echo "calling"
+#      - name: Call another workflow
+#        uses: ./.github/workflows/build.yml
+#      - name: Msg 2
+#        run: echo "called"
         
+jobs:
+  trigger-called-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo a message
+        uses: ./.github/workflows/echo.yml
+        with:
+          message: 'Hello from Calling Workflow!'
