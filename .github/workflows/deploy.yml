@@ -38,6 +38,8 @@ jobs:
   trigger-called-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code (looks like it's necessary to then invoke an action)
+        uses: actions/checkout@v2
       - name: Echo a message
         uses: ./.github/workflows/echo.yml
         with:
