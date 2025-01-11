@@ -1,0 +1,19 @@
+# .github/workflows/calling-workflow.yml
+name: Calling Workflow
+
+on:
+  push:
+    branches:
+      - [ "deploy-ghp" ]
+
+jobs:
+  trigger-called-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Call another workflow
+        uses: ./.github/workflows/called-workflow.yml
+        with:
+          greeting: 'Hello from Calling Workflow!'
