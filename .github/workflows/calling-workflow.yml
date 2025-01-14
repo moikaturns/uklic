@@ -12,7 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
+        with:
+          ref: ${{ github.ref }}
       - name: Call another workflow
         uses: ./.github/workflows/called-workflow.yml
         with:
