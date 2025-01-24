@@ -9,7 +9,7 @@ on:
 #  pull_request:
 #    branches: [ "main" ]
   push:
-    branches: [ "deploy-ghp" ]
+    branches: [ "deploy-ghpX" ]
 #  workflow_dispatch:
 #    inputs:
 #      logLevel:
