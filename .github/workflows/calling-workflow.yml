@@ -4,7 +4,7 @@ name: Calling Workflow
 on:
   push:
     branches:
-      - [ "deploy-ghp" ]
+      - [ "deploy-ghpX" ]
 
 jobs:
   trigger-called-workflow:
