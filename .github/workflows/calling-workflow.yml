@@ -10,6 +10,8 @@ jobs:
   trigger-called-workflow:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Call another workflow
         uses: ./.github/workflows/called-workflow.yml
         with:
