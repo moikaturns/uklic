@@ -13,6 +13,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Call another workflow
-        uses: ./.github/workflows/called-workflow.yml
+        uses: /home/runner/work/uklic/uklic/.github/workflows/called-workflow.yml
         with:
           greeting: 'Hello from Calling Workflow!'
