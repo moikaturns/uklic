@@ -1,11 +1,9 @@
 # .github/workflows/calling-workflow.yml
 name: Calling Workflow
-
 on:
   push:
     branches:
-      - [ "deploy-ghpX" ]
-
+      - [ "Xdeploy-ghpX" ]
 jobs:
   trigger-called-workflow:
     runs-on: ubuntu-latest
