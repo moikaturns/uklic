@@ -12,7 +12,7 @@ name: Angular Build CI & Github Pages Deploy
 on:
   push:
     branches:
-      - [ "deploy-ghp" ]
+      - deploy-ghp
 jobs:
   # Build job
   build:
