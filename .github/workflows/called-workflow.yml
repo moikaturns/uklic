@@ -1,0 +1,17 @@
+# .github/workflows/called-workflow.yml
+name: Called Workflow
+
+on:
+  workflow_call:
+    inputs:
+      greeting:
+        description: 'A greeting message'
+        required: false
+        default: 'Hello, World!'
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting message
+        run: echo "${{ inputs.greeting }}"
