@@ -46,8 +46,11 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    permissions: # add to fix err "Unable to get ACTIONS_ID_TOKEN_REQUEST_URL env variable"
+    permissions: # add to fix errors
+                    # "Unable to get ACTIONS_ID_TOKEN_REQUEST_URL env variable"
+                    # Ensure GITHUB_TOKEN has permission "pages: write"
       id-token: write  # Add this line to allow requesting OIDC tokens
+      pages: write
     needs: build
     steps:
       - name: Deploy to GitHub Pages
